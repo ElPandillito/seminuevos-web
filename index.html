@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEMINUEVOS MIGUEL ÁNGEL | Autos seminuevos de confianza</title>
+  <meta name="description" content="Encuentra tu próximo auto seminuevo con la confianza que mereces. Inventario certificado, financiamiento a tu medida y atención directa por WhatsApp." />
+
+  <!-- OG:INICIO (lo escribe generar_autos.py) -->
+  <!-- OG:FIN -->
+
+  <!-- Ícono de la pestaña -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#09090b" />
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-zinc-950 text-white font-sans antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ============================================================
+       INICIO NAVBAR
+       ============================================================ -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-lg">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 lg:h-20" aria-label="Navegación principal">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-3">
+        <img src="img/logo.png" alt="Logo de Seminuevos" width="48" height="48" class="h-11 w-11 object-contain lg:h-12 lg:w-12" />
+        <span class="leading-none">
+          <span class="block text-sm font-extrabold tracking-wider sm:text-base">SEMINUEVOS</span>
+          <span class="block text-[11px] font-semibold tracking-[0.22em] text-red-500 sm:text-xs">MIGUEL ÁNGEL</span>
+        </span>
+      </a>
+
+      <!-- Enlaces (escritorio) -->
+      <ul class="hidden items-center gap-8 text-sm font-medium text-zinc-300 lg:flex">
+        <li><a href="#inicio" class="transition hover:text-white">Inicio</a></li>
+        <li><a href="#inventario" class="transition hover:text-white">Inventario</a></li>
+        <li><a href="#financiamiento" class="transition hover:text-white">Financiamiento</a></li>
+        <li><a href="#contacto" class="transition hover:text-white">Contacto</a></li>
+      </ul>
+
+      <!-- Botón destacado (escritorio) -->
+      <a href="#contacto" data-wa="sell"
+         class="hidden rounded-full bg-red-600 px-6 py-2.5 text-sm font-bold shadow-lg shadow-red-600/25 transition hover:bg-red-500 lg:inline-block">
+        Vender mi auto
+      </a>
+
+      <!-- Botón menú (móvil) -->
+      <button id="menu-btn" type="button" class="rounded-lg p-2 text-zinc-300 hover:bg-white/10 lg:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-zinc-950 lg:hidden">
+      <ul class="mx-auto max-w-7xl space-y-1 px-4 py-4 text-base font-medium text-zinc-200 sm:px-6">
+        <li><a href="#inicio" class="block rounded-lg px-3 py-3 hover:bg-white/5">Inicio</a></li>
+        <li><a href="#inventario" class="block rounded-lg px-3 py-3 hover:bg-white/5">Inventario</a></li>
+        <li><a href="#financiamiento" class="block rounded-lg px-3 py-3 hover:bg-white/5">Financiamiento</a></li>
+        <li><a href="#contacto" class="block rounded-lg px-3 py-3 hover:bg-white/5">Contacto</a></li>
+        <li class="pt-2">
+          <a href="#contacto" data-wa="sell"
+             class="block rounded-full bg-red-600 px-6 py-3 text-center font-bold hover:bg-red-500">Vender mi auto</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- FIN NAVBAR -->
+
+
+  <main>
+
+    <!-- ============================================================
+         INICIO HERO
+         ============================================================ -->
+    <section id="inicio" class="relative isolate overflow-hidden">
+      <!-- Imagen de fondo + degradados -->
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80"
+           alt="" class="absolute inset-0 -z-20 h-full w-full object-cover" fetchpriority="high" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-zinc-950 via-zinc-950/85 to-zinc-950/40"></div>
+      <div class="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-zinc-950 to-transparent"></div>
+
+      <div class="mx-auto max-w-7xl px-4 pb-24 pt-16 sm:px-6 sm:pt-24 lg:px-8 lg:pb-32 lg:pt-32">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-600/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-red-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+            Autos seminuevos revisados
+          </span>
+
+          <h1 class="mt-6 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
+            Encuentra tu próximo auto con la
+            <span class="bg-gradient-to-r from-red-500 to-red-400 bg-clip-text text-transparent">confianza que mereces</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+            Unidades seleccionadas, historial transparente y financiamiento a tu medida.
+            Te acompañamos de principio a fin para que estrenes auto sin sorpresas.
+          </p>
+
+          <!-- Botones de llamada a la acción -->
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#inventario"
+               class="inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-4 text-base font-bold shadow-lg shadow-red-600/30 transition hover:bg-red-500">
+              Ver Inventario
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a href="#financiamiento"
+               class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-8 py-4 text-base font-bold backdrop-blur transition hover:bg-white/10">
+              Cotizar Crédito
+            </a>
+          </div>
+        </div>
+
+        <!-- Buscador rápido -->
+        <form id="search-form" class="mt-12 grid gap-4 rounded-2xl border border-white/10 bg-zinc-900/80 p-4 shadow-2xl backdrop-blur-xl sm:grid-cols-2 sm:p-5 lg:mt-16 lg:grid-cols-4 lg:items-end" aria-label="Buscador rápido de autos">
+
+          <div>
+            <label for="f-brand" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-zinc-400">Marca</label>
+            <select id="f-brand" class="w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3.5 text-sm text-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/40">
+              <option value="">Todas las marcas</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="f-type" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-zinc-400">Tipo de auto</label>
+            <select id="f-type" class="w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3.5 text-sm text-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/40">
+              <option value="">Todos los tipos</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="f-budget" class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-zinc-400">Presupuesto</label>
+            <select id="f-budget" class="w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3.5 text-sm text-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/40">
+              <option value="">Cualquier presupuesto</option>
+              <option value="0-250000">Hasta $250,000</option>
+              <option value="250000-350000">$250,000 – $350,000</option>
+              <option value="350000-450000">$350,000 – $450,000</option>
+              <option value="450000-99999999">Más de $450,000</option>
+            </select>
+          </div>
+
+          <button type="submit"
+                  class="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-3.5 text-sm font-bold transition hover:bg-red-500 sm:col-span-2 lg:col-span-1">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+            Buscar autos
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- FIN HERO -->
+
+
+    <!-- ============================================================
+         INICIO INVENTARIO DESTACADO
+         FOTOS: carpeta /fotos (copias optimizadas de las fotos originales IMG_04xx).
+         DATOS: Formentor, Sentra, Kia Soul y Ram 700 salen del inventario (V INVENTARIO SEMINUEVOS, 01 sep 2026).
+         Renault Oroch y Hyundai Grand i10 NO están en ese archivo: sus año, km, transmisión y precio son de EJEMPLO.
+         Para agregar un auto: copia una tarjeta completa (desde su etiqueta article hasta su cierre),
+         cambia el id, data-brand, data-type, data-price, data-photos y el contenido, y luego vuelve
+         a ejecutar generar_autos.py para crear su página con foto.
+         ============================================================ -->
+    <section id="inventario" class="scroll-mt-20 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Encabezado de sección -->
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-red-500">Inventario destacado</p>
+            <h2 class="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Listos para llevarte hoy</h2>
+            <p class="mt-3 max-w-xl text-zinc-400">Cada unidad pasa por una revisión mecánica y estética antes de llegar a ti.</p>
+          </div>
+          <p id="results-count" class="text-sm font-medium text-zinc-400" aria-live="polite"></p>
+        </div>
+
+        <!-- Grid de tarjetas -->
+        <div id="car-grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- ---------- Tarjeta: SUV · Cupra Formentor ---------- -->
+          <article id="cupra-formentor" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Cupra" data-type="SUV" data-price="499000"
+                   data-photos="fotos/cupra-formentor-1.jpg,fotos/cupra-formentor-2.jpg,fotos/cupra-formentor-3.jpg,fotos/cupra-formentor-4.jpg,fotos/cupra-formentor-5.jpg,fotos/cupra-formentor-6.jpg,fotos/cupra-formentor-7.jpg,fotos/cupra-formentor-8.jpg,fotos/cupra-formentor-9.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Cupra Formentor">
+              <img src="fotos/cupra-formentor-portada.jpg" alt="Cupra Formentor 2023 negro" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">SUV</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>9 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2023</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.3 19a10 10 0 1 1 17.4 0" /></svg>54,289 km</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Automática</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Cupra Formentor 2.0</h3>
+              <p class="mt-1 text-sm text-zinc-400">Motor 2.0 · Color negro media noche</p>
+              <p class="mt-4 text-3xl font-black text-white">$499,000 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por el Cupra Formentor por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Tarjeta: Sedán · Nissan Sentra SR Platinum ---------- -->
+          <article id="nissan-sentra" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Nissan" data-type="Sedán" data-price="399900"
+                   data-photos="fotos/nissan-sentra-1.jpg,fotos/nissan-sentra-2.jpg,fotos/nissan-sentra-3.jpg,fotos/nissan-sentra-4.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Nissan Sentra SR Platinum">
+              <img src="fotos/nissan-sentra-portada.jpg" alt="Nissan Sentra SR Platinum rojo" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">Sedán</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>4 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2023</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.3 19a10 10 0 1 1 17.4 0" /></svg>25,068 km</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Automática</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Nissan Sentra SR Platinum</h3>
+              <p class="mt-1 text-sm text-zinc-400">Transmisión CVT · Color rojo</p>
+              <p class="mt-4 text-3xl font-black text-white">$399,900 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por el Nissan Sentra por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Tarjeta: Pickup · Renault Oroch (OCULTA: no disponible por ahora. Para mostrarla quita data-oculto y la clase hidden. Año, km y transmisión son de EJEMPLO) ---------- -->
+          <article id="renault-oroch" data-oculto class="car-card hidden group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Renault" data-type="Pickup" data-price="420000"
+                   data-photos="fotos/renault-oroch-1.jpg,fotos/renault-oroch-2.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Renault Oroch">
+              <img src="fotos/renault-oroch-portada.jpg" alt="Renault Oroch roja" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">Pickup</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>2 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2022</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.3 19a10 10 0 1 1 17.4 0" /></svg>42,100 km</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Manual</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Renault Oroch</h3>
+              <p class="mt-1 text-sm text-zinc-400">Doble cabina · Barras de techo</p>
+              <p class="mt-4 text-3xl font-black text-white">$420,000 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por la Renault Oroch por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Tarjeta: SUV · Kia Soul EX ---------- -->
+          <article id="kia-soul" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Kia" data-type="SUV" data-price="330000"
+                   data-photos="fotos/kia-soul-1.jpg,fotos/kia-soul-2.jpg,fotos/kia-soul-3.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Kia Soul EX">
+              <img src="fotos/kia-soul-portada.jpg" alt="Kia Soul EX Pack 2020 azul" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">SUV</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>3 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2020</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.3 19a10 10 0 1 1 17.4 0" /></svg>68,536 km</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Automática</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Kia Soul EX Pack</h3>
+              <p class="mt-1 text-sm text-zinc-400">Motor 2.0L · Color azul neptuno</p>
+              <p class="mt-4 text-3xl font-black text-white">$330,000 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por el Kia Soul por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Tarjeta: Pickup · Ram 700 ---------- -->
+          <article id="ram-700" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Ram" data-type="Pickup" data-price="315000"
+                   data-photos="fotos/ram-700-1.jpg,fotos/ram-700-2.jpg,fotos/ram-700-3.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Ram 700">
+              <img src="fotos/ram-700-portada.jpg" alt="Ram 700 gris plata" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">Pickup</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>3 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2023</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.3 19a10 10 0 1 1 17.4 0" /></svg>47,838 km</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Manual</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Ram 700 SLT Crew Cab</h3>
+              <p class="mt-1 text-sm text-zinc-400">Motor 1.3L · Color plata</p>
+              <p class="mt-4 text-3xl font-black text-white">$315,000 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por la Ram 700 por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Tarjeta: Pickup · Ram 700 Pickup roja 2024 (precio y financiamiento del anuncio; sin kilometraje) ---------- -->
+          <article id="ram-700-roja" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Ram" data-type="Pickup" data-price="299000"
+                   data-photos="fotos/ram-700-roja-1.jpg,fotos/ram-700-roja-2.jpg,fotos/ram-700-roja-3.jpg,fotos/ram-700-roja-4.jpg,fotos/ram-700-roja-5.jpg,fotos/ram-700-roja-6.jpg,fotos/ram-700-roja-7.jpg,fotos/ram-700-roja-8.jpg,fotos/ram-700-roja-9.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Ram 700">
+              <img src="fotos/ram-700-roja-portada.jpg" alt="Ram 700 Pickup 2024 roja" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">Pickup</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>9 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2024</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Manual</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Ram 700 Pickup</h3>
+              <p class="mt-1 text-sm text-zinc-400">Enganche desde 15% · Plazos de 12 a 60 meses</p>
+              <p class="mt-4 text-3xl font-black text-white">$299,000 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por la Ram 700 por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- Tarjeta: Hatchback · Hyundai Grand i10 (DATOS DE EJEMPLO: no está en el inventario) ---------- -->
+          <article id="hyundai-grand-i10" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
+                   data-brand="Hyundai" data-type="Hatchback" data-price="189900"
+                   data-photos="fotos/hyundai-grand-i10-1.jpg,fotos/hyundai-grand-i10-2.jpg,fotos/hyundai-grand-i10-3.jpg,fotos/hyundai-grand-i10-4.jpg">
+            <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Hyundai Grand i10">
+              <img src="fotos/hyundai-grand-i10-portada.jpg" alt="Hyundai Grand i10 negro" loading="lazy"
+                   class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-bold backdrop-blur">Hatchback</span>
+              <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-zinc-950/80 px-2.5 py-1 text-xs font-semibold backdrop-blur"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z" /><circle cx="12" cy="13" r="3" /></svg>4 fotos</span>
+            </button>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap gap-2 text-xs font-medium text-zinc-300">
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>2021</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.3 19a10 10 0 1 1 17.4 0" /></svg>29,300 km</span>
+                <span class="tag"><svg class="h-3.5 w-3.5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1" /></svg>Manual</span>
+              </div>
+              <h3 class="mt-4 text-xl font-extrabold">Hyundai Grand i10</h3>
+              <p class="mt-1 text-sm text-zinc-400">Ideal para ciudad · Bajo consumo</p>
+              <p class="mt-4 text-3xl font-black text-white">$189,900 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <div class="mt-auto flex gap-3 pt-5">
+                <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
+                <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por el Hyundai Grand i10 por WhatsApp" title="Preguntar por este auto">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Estado vacío (se muestra cuando ningún auto coincide con el buscador) -->
+        <div id="empty-state" class="mt-10 hidden rounded-2xl border border-dashed border-white/15 bg-zinc-900/50 p-10 text-center">
+          <p class="text-lg font-bold">No encontramos autos con esos filtros</p>
+          <p class="mt-2 text-sm text-zinc-400">Prueba con otra combinación o pregúntanos: seguro tenemos algo para ti.</p>
+          <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+            <button id="reset-filters" type="button" class="rounded-full border border-white/20 px-6 py-3 text-sm font-bold hover:bg-white/10">Limpiar filtros</button>
+            <a href="#" data-wa="search" class="rounded-full bg-red-600 px-6 py-3 text-sm font-bold hover:bg-red-500">Pedir asesoría por WhatsApp</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIN INVENTARIO DESTACADO -->
+
+
+    <!-- ============================================================
+         INICIO FINANCIAMIENTO
+         ============================================================ -->
+    <section id="financiamiento" class="scroll-mt-20 border-y border-white/10 bg-zinc-900/60 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-sm font-bold uppercase tracking-widest text-red-500">Financiamiento</p>
+          <h2 class="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Estrena auto con un plan a tu medida</h2>
+          <p class="mt-3 text-zinc-400">Trabajamos con varias financieras para encontrar la mensualidad que sí puedes pagar.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-zinc-950 p-6">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600/15 text-red-500">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Trámite seguro</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Te guiamos en cada paso y todo queda por escrito.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-zinc-950 p-6">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600/15 text-red-500">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Respuesta rápida</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Solicita tu pre-aprobación y conoce tu mensualidad en poco tiempo.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-zinc-950 p-6">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600/15 text-red-500">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v10H3z" /><circle cx="12" cy="12" r="2.5" /><path d="M7 12h.01M17 12h.01" /></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">Recibimos tu auto</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Tu auto actual puede ser parte del enganche.</p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a href="#" data-wa="creditGeneral"
+             class="inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-4 font-bold shadow-lg shadow-red-600/25 transition hover:bg-red-500">
+            Cotizar mi crédito por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- FIN FINANCIAMIENTO -->
+
+  </main>
+
+
+  <!-- ============================================================
+       INICIO FOOTER / CONTACTO
+       ============================================================ -->
+  <footer id="contacto" class="scroll-mt-20 py-16">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+      <div>
+        <img src="img/logo.png" alt="Logo de Seminuevos" width="64" height="64" loading="lazy" class="mb-3 h-16 w-16 object-contain" />
+        <p class="text-lg font-extrabold tracking-wider">SEMINUEVOS <span class="text-red-500">MIGUEL ÁNGEL</span></p>
+        <p class="mt-3 max-w-xs text-sm leading-relaxed text-zinc-400">Autos seminuevos seleccionados, con atención directa y trato honesto.</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-zinc-300">Contacto</h3>
+        <ul class="mt-4 space-y-2 text-sm text-zinc-400">
+          <li>WhatsApp: +52 33 1072 1299</li>
+          <li>Lunes a viernes: 9:00 am – 7:00 pm</li>
+          <li>Sábados: 9:00 am – 2:00 pm</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-zinc-300">Escríbenos</h3>
+        <a href="#" data-wa="general"
+           class="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold transition hover:bg-emerald-500">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+          Chatear por WhatsApp
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100083828928209" target="_blank" rel="noopener noreferrer"
+           class="mt-3 inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-bold transition hover:bg-white/10">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971H15.83c-1.491 0-1.956.93-1.956 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z" /></svg>
+          Síguenos en Facebook
+        </a>
+      </div>
+    </div>
+    <div class="mx-auto mt-12 max-w-7xl border-t border-white/10 px-4 pt-6 text-center text-xs text-zinc-500 sm:px-6 lg:px-8">
+      © <span id="year"></span> Seminuevos Miguel Ángel. Todos los derechos reservados. Precios sujetos a cambio sin previo aviso.
+    </div>
+  </footer>
+  <!-- FIN FOOTER / CONTACTO -->
+
+
+  <!-- ============================================================
+       INICIO GALERÍA / DETALLES DEL AUTO (se abre con "Ver Detalles")
+       Los datos salen de la tarjeta; las fotos de data-photos.
+       ============================================================ -->
+  <dialog id="car-modal" class="m-auto max-h-[92vh] w-[calc(100%-1.5rem)] max-w-5xl overflow-y-auto rounded-2xl border border-white/10 bg-zinc-900 p-0 text-white backdrop:bg-black/80 backdrop:backdrop-blur-sm" aria-labelledby="m-name">
+    <div class="grid md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+
+      <!-- Fotos -->
+      <div class="min-w-0 bg-zinc-950 p-3 sm:p-4">
+        <div class="relative flex h-[52vh] items-center justify-center overflow-hidden rounded-xl bg-black md:h-[66vh]">
+          <img id="m-img" src="" alt="" class="h-full w-full object-contain" />
+          <button id="m-prev" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-zinc-950/70 p-2.5 backdrop-blur hover:bg-red-600" aria-label="Foto anterior">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <button id="m-next" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-zinc-950/70 p-2.5 backdrop-blur hover:bg-red-600" aria-label="Foto siguiente">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+          <span id="m-count" class="absolute bottom-2 right-2 rounded-full bg-zinc-950/70 px-3 py-1 text-xs font-semibold backdrop-blur"></span>
+        </div>
+        <div id="m-thumbs" class="mt-3 flex gap-2 overflow-x-auto pb-1"></div>
+      </div>
+
+      <!-- Información -->
+      <div class="relative flex min-w-0 flex-col p-5 sm:p-7">
+        <button id="m-close" type="button" class="absolute right-3 top-3 rounded-full p-2 text-zinc-400 hover:bg-white/10 hover:text-white" aria-label="Cerrar">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+        </button>
+        <span id="m-type" class="w-fit rounded-full bg-red-600/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-red-400"></span>
+        <h3 id="m-name" class="mt-4 pr-8 text-2xl font-black sm:text-3xl"></h3>
+        <p id="m-sub" class="mt-1 text-sm text-zinc-400"></p>
+        <div id="m-tags" class="mt-5 flex flex-wrap gap-2 text-xs font-medium text-zinc-300"></div>
+        <p id="m-price" class="mt-6 text-4xl font-black"></p>
+        <a id="m-wa" href="#" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 text-sm font-bold transition hover:bg-emerald-500">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+          Preguntar por este auto
+        </a>
+        <a href="#" id="m-fin" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3.5 text-sm font-bold transition hover:bg-white/10">Cotizar crédito de este auto</a>
+      </div>
+    </div>
+  </dialog>
+  <!-- FIN GALERÍA / DETALLES -->
+
+
+  <!-- ============================================================
+       ESTILOS REUTILIZABLES (etiquetas y botón de WhatsApp)
+       ============================================================ -->
+  <style type="text/tailwindcss">
+    @layer components {
+      .tag    { @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-zinc-800 px-3 py-1; }
+      .wa-btn { @apply flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white transition hover:bg-emerald-500; }
+    }
+  </style>
+
+
+  <!-- ============================================================
+       INICIO JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // Número de WhatsApp de la agencia: +52 33 1072 1299
+    // (código de país + número, sin "+", espacios ni guiones)
+    const WHATSAPP_NUMBER = '523310721299';
+
+    // Enlace público de la página (ej. https://tu-sitio.netlify.app). Lo llena
+    // generar_autos.py. Con él, cada mensaje de un auto lleva el enlace de ese
+    // auto y WhatsApp muestra su FOTO en el mensaje. Vacío = sin enlace.
+    const SITE_URL = '';
+
+    // ── Mensajes de WhatsApp: edítalos aquí ─────────────────────────────
+    // ___ = espacio que el cliente completa antes de enviar.
+    // "Ref" es el código del auto: tu sistema (API) lo puede leer para
+    // responder automáticamente con la foto y los datos de ese auto.
+    const MSG = {
+      // Botón de una tarjeta / galería (c = datos del auto)
+      car: (c) =>
+        `¡Hola! Soy ___ 👋\nVi en su página el *${c.name} ${c.year}*${c.km ? ` (${c.km})` : ''} en *${c.price}*.\n` +
+        `¿Sigue disponible? Me gustaría agendar una visita o prueba de manejo.\nRef: ${c.ref}${c.link}`,
+      // "Cotizar crédito de este auto" (galería)
+      credit: (c) =>
+        `¡Hola! Soy ___ 👋\nMe interesa el *${c.name} ${c.year}* y quiero cotizar financiamiento.\n` +
+        `Enganche aproximado: ___ · Plazo: ___\nRef: ${c.ref}${c.link}`,
+      // Botón "Vender mi auto"
+      sell:
+        '¡Hola! Soy ___ 👋\nQuiero vender mi auto.\nMarca y modelo: ___ · Año: ___ · Km: ___\n¿Me pueden dar una cotización?',
+      // Sección Financiamiento (sin auto elegido)
+      creditGeneral:
+        '¡Hola! Soy ___ 👋\nQuiero cotizar un crédito para un auto seminuevo.\nEnganche aproximado: ___ · Plazo: ___\n¿Qué opciones tienen?',
+      // Pie de página
+      general: '¡Hola! 👋 Vi la página de Seminuevos Miguel Ángel y quisiera más información sobre sus autos.',
+      // Cuando el buscador no encuentra nada (q = lo que eligió el cliente)
+      search: (q) => `¡Hola! Soy ___ 👋\nBusco ${q}.\n¿Qué opciones tienen?`,
+    };
+
+    const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    const setWa = (el, msg) => {
+      el.href = waLink(msg);
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    };
+
+    // Mensajes fijos: [data-wa="sell" | "creditGeneral" | "general"]
+    document.querySelectorAll('[data-wa]').forEach((el) => {
+      const m = MSG[el.dataset.wa];
+      if (typeof m === 'string') setWa(el, m);
+    });
+
+    // Menú móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const setMenu = (open) => {
+      mobileMenu.classList.toggle('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+    };
+    menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    mobileMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+
+    // Buscador rápido: filtra las tarjetas por marca, tipo y presupuesto
+    const cards = [...document.querySelectorAll('.car-card:not([data-oculto])')];
+
+    // Datos del auto tomados de su tarjeta (año, km y precio salen de lo que se ve)
+    function carInfo(card) {
+      const tags = [...card.querySelectorAll('.tag')].map((t) => t.textContent.trim());
+      const slug = card.dataset.photos.split(',')[0].split('/').pop().replace(/-\d+\.jpg$/, '');
+      return {
+        name: card.querySelector('h3').textContent.trim(),
+        year: tags[0],
+        km: tags.find((x) => /km/i.test(x)) || '',
+        price: card.querySelector('.text-3xl').firstChild.textContent.trim(),
+        ref: `${slug.toUpperCase()}-${tags[0]}`, // ej. CUPRA-FORMENTOR-2023
+        link: SITE_URL ? `\n${SITE_URL}/autos/${slug}.html` : '',
+      };
+    }
+    cards.forEach((card) => setWa(card.querySelector('[data-wa]'), MSG.car(carInfo(card))));
+    const brand = document.getElementById('f-brand');
+    const type = document.getElementById('f-type');
+    const budget = document.getElementById('f-budget');
+    // Marcas y tipos del buscador: salen de los autos que se muestran
+    const fill = (select, key) =>
+      [...new Set(cards.map((c) => c.dataset[key]))]
+        .sort((a, b) => a.localeCompare(b, 'es'))
+        .forEach((v) => select.add(new Option(v, v)));
+    fill(brand, 'brand');
+    fill(type, 'type');
+
+    const count = document.getElementById('results-count');
+    const empty = document.getElementById('empty-state');
+
+    function applyFilters() {
+      const [min, max] = budget.value ? budget.value.split('-').map(Number) : [0, Infinity];
+      let visible = 0;
+      cards.forEach((card) => {
+        const price = Number(card.dataset.price);
+        const show =
+          (!brand.value || card.dataset.brand === brand.value) &&
+          (!type.value || card.dataset.type === type.value) &&
+          price >= min && price <= max;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      count.textContent = `${visible} ${visible === 1 ? 'auto disponible' : 'autos disponibles'}`;
+      empty.classList.toggle('hidden', visible > 0);
+      if (!visible) {
+        const what = [type.value ? type.value.toLowerCase() : 'auto', brand.value].filter(Boolean).join(' ');
+        const q = `un ${what}` + (budget.value ? `, presupuesto: ${budget.selectedOptions[0].text}` : '');
+        setWa(empty.querySelector('[data-wa]'), MSG.search(q));
+      }
+    }
+
+    document.getElementById('search-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      applyFilters();
+      document.getElementById('inventario').scrollIntoView({ behavior: 'smooth' });
+    });
+    [brand, type, budget].forEach((s) => s.addEventListener('change', applyFilters));
+    document.getElementById('reset-filters').addEventListener('click', () => {
+      brand.value = type.value = budget.value = '';
+      applyFilters();
+    });
+
+    // Galería / detalles: "Ver Detalles" y la foto de la tarjeta abren el modal
+    const modal = document.getElementById('car-modal');
+    const mImg = document.getElementById('m-img');
+    const mThumbs = document.getElementById('m-thumbs');
+    let photos = [];
+    let current = 0;
+
+    function showPhoto(i) {
+      current = (i + photos.length) % photos.length;
+      mImg.src = photos[current];
+      mImg.alt = `${document.getElementById('m-name').textContent} – foto ${current + 1} de ${photos.length}`;
+      document.getElementById('m-count').textContent = `${current + 1} / ${photos.length}`;
+      [...mThumbs.children].forEach((t, k) => {
+        t.classList.toggle('ring-2', k === current);
+        t.classList.toggle('ring-red-500', k === current);
+        t.classList.toggle('opacity-50', k !== current);
+      });
+      mThumbs.children[current]?.scrollIntoView({ block: 'nearest', inline: 'center' });
+    }
+
+    function openCar(card) {
+      photos = card.dataset.photos.split(',');
+      document.getElementById('m-name').textContent = card.querySelector('h3').textContent;
+      document.getElementById('m-type').textContent = card.dataset.type;
+      document.getElementById('m-sub').textContent = card.querySelector('h3 + p').textContent;
+      document.getElementById('m-tags').innerHTML = card.querySelector('.tag').parentElement.innerHTML;
+      document.getElementById('m-price').innerHTML = card.querySelector('.text-3xl').innerHTML;
+      document.getElementById('m-wa').href = card.querySelector('[data-wa]').href;
+      document.getElementById('m-fin').href = waLink(MSG.credit(carInfo(card)));
+      mThumbs.innerHTML = '';
+      photos.forEach((src, k) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'h-14 w-20 shrink-0 overflow-hidden rounded-lg transition';
+        b.setAttribute('aria-label', `Ver foto ${k + 1}`);
+        b.innerHTML = `<img src="${src}" alt="" loading="lazy" class="h-full w-full object-cover" />`;
+        b.addEventListener('click', () => showPhoto(k));
+        mThumbs.appendChild(b);
+      });
+      showPhoto(0);
+      modal.showModal();
+      document.body.classList.add('overflow-hidden');
+    }
+
+    cards.forEach((card) =>
+      card.querySelectorAll('.js-details').forEach((b) => b.addEventListener('click', () => openCar(card)))
+    );
+    document.getElementById('m-prev').addEventListener('click', () => showPhoto(current - 1));
+    document.getElementById('m-next').addEventListener('click', () => showPhoto(current + 1));
+    document.getElementById('m-close').addEventListener('click', () => modal.close());
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });
+    modal.addEventListener('close', () => document.body.classList.remove('overflow-hidden'));
+    modal.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') showPhoto(current - 1);
+      if (e.key === 'ArrowRight') showPhoto(current + 1);
+    });
+
+    // Enlace directo a un auto (index.html#cupra-formentor): abre su galería
+    const linked = document.getElementById(location.hash.slice(1));
+    if (linked && linked.classList.contains('car-card') && !linked.hasAttribute('data-oculto')) openCar(linked);
+
+    applyFilters();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <!-- FIN JAVASCRIPT -->
+
+</body>
+</html>

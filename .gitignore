@@ -1,0 +1,17 @@
+# Fotos originales del celular y video: pesan mucho y tienen las placas sin tapar.
+# La página usa las copias ligeras de fotos/.
+IMG_*.jpeg
+IMG_*.jpg
+IMG_*.png
+IMG_*.mov
+*.mov
+*.heic
+*.HEIC
+
+# Inventario y datos internos (costos, series/VIN): nunca al repositorio
+*.xlsx
+*.xls
+*.csv
+
+# macOS
+.DS_Store
