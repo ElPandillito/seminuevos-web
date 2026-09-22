@@ -176,7 +176,8 @@
          INICIO INVENTARIO DESTACADO
          FOTOS: carpeta /fotos (copias optimizadas de las fotos originales IMG_04xx).
          DATOS: Formentor, Sentra, Kia Soul y Ram 700 salen del inventario (V INVENTARIO SEMINUEVOS, 01 sep 2026).
-         Renault Oroch y Hyundai Grand i10 NO están en ese archivo: sus año, km, transmisión y precio son de EJEMPLO.
+         Renault Oroch: no está en ese archivo, año/km/transmisión de EJEMPLO (oculta hasta tener datos reales).
+         Hyundai Grand i10: precio real ($220,000); año, km y transmisión siguen de EJEMPLO.
          Para agregar un auto: copia una tarjeta completa (desde su etiqueta article hasta su cierre),
          cambia el id, data-brand, data-type, data-price, data-photos y el contenido, y luego vuelve
          a ejecutar generar_autos.py para crear su página con foto.
@@ -364,9 +365,9 @@
             </div>
           </article>
 
-          <!-- ---------- Tarjeta: Hatchback · Hyundai Grand i10 (DATOS DE EJEMPLO: no está en el inventario) ---------- -->
+          <!-- ---------- Tarjeta: Hatchback · Hyundai Grand i10 (precio real: $220,000; año/km/transmisión siguen de EJEMPLO) ---------- -->
           <article id="hyundai-grand-i10" class="car-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-600/10"
-                   data-brand="Hyundai" data-type="Hatchback" data-price="189900"
+                   data-brand="Hyundai" data-type="Hatchback" data-price="220000"
                    data-photos="fotos/hyundai-grand-i10-1.jpg,fotos/hyundai-grand-i10-2.jpg,fotos/hyundai-grand-i10-3.jpg,fotos/hyundai-grand-i10-4.jpg">
             <button type="button" class="js-details relative block aspect-[4/3] w-full overflow-hidden text-left" aria-label="Ver fotos y detalles de Hyundai Grand i10">
               <img src="fotos/hyundai-grand-i10-portada.jpg" alt="Hyundai Grand i10 negro" loading="lazy"
@@ -382,7 +383,7 @@
               </div>
               <h3 class="mt-4 text-xl font-extrabold">Hyundai Grand i10</h3>
               <p class="mt-1 text-sm text-zinc-400">Ideal para ciudad · Bajo consumo</p>
-              <p class="mt-4 text-3xl font-black text-white">$189,900 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
+              <p class="mt-4 text-3xl font-black text-white">$220,000 <span class="text-sm font-semibold text-zinc-500">MXN</span></p>
               <div class="mt-auto flex gap-3 pt-5">
                 <button type="button" class="js-details flex-1 rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-bold transition hover:bg-red-500">Ver Detalles</button>
                 <a href="#" data-wa="car" class="wa-btn" aria-label="Preguntar por el Hyundai Grand i10 por WhatsApp" title="Preguntar por este auto">

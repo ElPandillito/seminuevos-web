@@ -15,3 +15,6 @@ IMG_*.mov
 
 # macOS
 .DS_Store
+
+# Cloudflare Wrangler local state (login token, cache): nunca al repo
+.wrangler/
