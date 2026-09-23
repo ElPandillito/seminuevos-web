@@ -668,7 +668,7 @@
         km: tags.find((x) => /km/i.test(x)) || '',
         price: card.querySelector('.text-3xl').firstChild.textContent.trim(),
         ref: `${slug.toUpperCase()}-${tags[0]}`, // ej. CUPRA-FORMENTOR-2023
-        link: SITE_URL ? `\n${SITE_URL}/autos/${slug}.html` : '',
+        link: SITE_URL ? `\n${SITE_URL}/autos/${slug}` : '',
       };
     }
     cards.forEach((card) => setWa(card.querySelector('[data-wa]'), MSG.car(carInfo(card))));

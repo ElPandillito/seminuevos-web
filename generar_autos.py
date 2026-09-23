@@ -81,13 +81,13 @@ def main():
             'name': f"{a['name']} {a['year']}",
             'brand': {'@type': 'Brand', 'name': a['brand']},
             'image': f"{site}/fotos/{a['slug']}-portada.jpg",
-            'url': f"{site}/autos/{a['slug']}.html",
+            'url': f"{site}/autos/{a['slug']}",
             'vehicleModelDate': a['year'],
             'itemCondition': 'https://schema.org/UsedCondition',
             'vehicleTransmission': a['trans'],
             'offers': {'@type': 'Offer', 'price': a['price_num'], 'priceCurrency': 'MXN',
                        'availability': 'https://schema.org/InStock',
-                       'url': f"{site}/autos/{a['slug']}.html"},
+                       'url': f"{site}/autos/{a['slug']}"},
         }
         km_num = re.sub(r'\D', '', a['km'])
         if km_num:
@@ -103,7 +103,7 @@ def main():
   <meta property="og:site_name" content="Seminuevos Miguel Ángel" />
   <meta property="og:title" content="{html.escape(a['name'] + ' ' + a['year'] + ' · ' + a['price'] + ' MXN', quote=True)}" />
   <meta property="og:description" content="{html.escape(desc, quote=True)}" />
-  <meta property="og:url" content="{site}/autos/{a['slug']}.html" />
+  <meta property="og:url" content="{site}/autos/{a['slug']}" />
   <meta property="og:image" content="{site}/fotos/{a['slug']}-portada.jpg" />
   <meta property="og:image:width" content="1000" />
   <meta property="og:image:height" content="750" />
